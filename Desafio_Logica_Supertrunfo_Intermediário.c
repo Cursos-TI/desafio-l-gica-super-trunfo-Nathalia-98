@@ -22,6 +22,7 @@ int main(){
     float Renda2;
     long int Superpoder1;
     long int Superpoder2;
+    int opcao;
 
     printf("Insira o Estado:\n");
     scanf("%c", &Estado1);
@@ -104,11 +105,79 @@ int main(){
 
     //comparação das cartas
 
-    printf("Comparação de cartas(Atributo - População):\n");
+    printf("Escolha qual atributo você gostaria de comparar.\n");
+    printf("1.PIB.\n");
+    printf("2.Área.\n");
+    printf("3.População.\n");
+    printf("4.Pontos Turísticos.\n");
+    printf("5.Densidade.\n");
+    printf("6.Renda per capita.\n");
+    scanf("%d", &opcao);
 
-    if(Populacao1 > Populacao2){
-        printf("Carta 1 Venceu!!\n");
-    } else{
-        printf("Carta 2 Venceu!!\n");
+    switch (opcao)
+    {
+    case 1:
+        printf("Comparando PIB:\n");
+        if (PIB1 > PIB2)
+        { 
+        printf("Carta 1 Ganhou!\n");
+        } else if (PIB1 < PIB2)
+        {
+        printf("Carta 2 Ganhou!\n");
+        }
+        break;
+    case 2: 
+        printf("Comparando Área:\n");
+        if (Area1 > Area2)
+        {
+        printf("Carta 1 Ganhou!\n");
+        } else if (Area1 < Area2)
+        {
+        printf("Carta 2 Ganhou!\n");
+        }
+        break;
+    case 3: 
+        printf("Comparando População:\n");
+        if (Populacao1 > Populacao2)
+        {
+        printf("Carta 1 Ganhou!\n");
+        } else if (Populacao1 < Populacao2)
+        {
+        printf("Carta 2 Ganhou\n");
+        }
+        break;
+    case 4: 
+        printf("Comparando Pontos Turísticos:\n");
+        if (Pontosturisticos1 > Pontosturisticos2)
+        {
+        printf("Carta 1 Ganhou!\n");
+        } else if (Pontosturisticos1 < Pontosturisticos2)
+        {
+        printf("Carta 2 Ganhou!\n");
+        }
+        break;
+    case 5: 
+        printf("Comparando Densidade:\n");
+        if (Densidade1 < Densidade2)
+        {
+        printf("Carta 1 Ganhou!\n");
+        } else if (Densidade1 > Densidade2)
+        {
+        printf("Carta 2 Ganhou!\n");
+        }
+        break;
+    case 6: 
+        printf("Comparando Renda PerCapita.\n");
+        if (Renda1 > Renda2)
+        {
+        printf("Carta 1 Ganhou!\n");
+        } else if (Renda1 < Renda2)
+        {
+        printf("Carta 2 Ganhou!\n");
+        }
+    default:
+    printf("Opção Inválida.");
+        break;
     }
+
 }
